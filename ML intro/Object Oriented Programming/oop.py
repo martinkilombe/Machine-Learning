@@ -73,12 +73,6 @@ my_electric_vehicle =ElectricCar("nISSAN", "Green")
 
 
 
-
-
-
-
-
-
 """Encapsulation:
 Encapsulation refers to the bundling of data (attributes) and methods (functions) within a class, and 
 controlling access to them. It helps in hiding the internal details of an object and provides a way to interact with the object through well-defined interfaces.
