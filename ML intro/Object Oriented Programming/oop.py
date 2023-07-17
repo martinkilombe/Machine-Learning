@@ -153,3 +153,35 @@ my_dog = Dog()
 my_animal.make_sound()  # Output: The animal makes a sound.
 my_cat.make_sound()  # Output: The cat meows.
 my_dog.make_sound()  # Output: The dog barks.
+
+
+
+
+#Comments
+#Single line comment
+
+"""THIS IS A MULTI LINE COMMENT
+COMMENT 1
+COMMENT 2
+COMMENT 3"""
+
+var = input("enter your name")
+print(var)
+
+#Conditions
+var = 45
+if var ==45:
+    print("Var matches")
+else:
+    print("Var does not match")
+
+#multiple conditions
+var = 47
+if var ==45:
+    print("Var matched")
+elif var==46:
+    print("var matched 1st elif")
+elif var==47:
+    print("var matched 2nd elif")
+else:
+    print("no VAR matches")
