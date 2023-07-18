@@ -185,3 +185,12 @@ elif var==47:
     print("var matched 2nd elif")
 else:
     print("no VAR matches")
+
+#Loops
+#while condition:
+    #statement
+
+#for i in condition:
+    #Statement
+
+#operators
