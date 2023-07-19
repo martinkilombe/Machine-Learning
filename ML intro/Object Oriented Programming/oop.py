@@ -418,3 +418,94 @@ Austria_results = (1,2,3,4,5)
 Max, Charles, Perez, Russell,Hamilton = Austria_results
 
 #Immutability--As mentioned earlier, tuples are immutable. Once created, you cannot modify their elements or their size.
+coordinates = (10, 20)
+
+# Attempt to modify an element (will raise an error)
+coordinates[0] = 5  # TypeError: 'tuple' object does not support item assignment
+
+# Attempt to add an element (will raise an error)
+coordinates.append(30)  # AttributeError: 'tuple' object has no attribute 'append'
+
+#Common Operations with Tuples---Though tuples are immutable, you can still perform various operations on them, like slicing, concatenation, and repetition.
+numbers = (1,2,3,4,5)
+print(numbers[1:4])     # Output: (2, 3, 4)
+print(numbers + (6, 7)) # Output: (1, 2, 3, 4, 5, 6, 7)
+print(numbers * 2)      # Output: (1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+
+#Tuple Packing and Unpacking
+point = 10,20
+print(point) #packing
+
+x,y = 5,10
+print(x)
+print(y)
+
+#Dictionaries
+"""Dictionary Methods
+Python provides various built-in methods for working with dictionaries. Some commonly used methods include:
+
+len(dictionary): Returns the number of key-value pairs in the dictionary.
+dictionary.keys(): Returns a list of all keys in the dictionary.
+dictionary.values(): Returns a list of all values in the dictionary.
+dictionary.items(): Returns a list of tuples containing key-value pairs.
+dictionary.get(key): Returns the value associated with the given key.
+key in dictionary: Returns True if the key exists in the dictionary, otherwise False.
+dictionary.pop(key): Removes the key-value pair for the given key and returns the value.
+dictionary.clear(): Removes all key-value pairs from the dictionary.
+"""
+Spa_Gp = {
+    1: "Max verstappen",
+    2: "Sergio Perez",
+    3: "Lewis Hamilton",
+    4: "George Russell"
+}
+print(Spa_Gp)
+
+
+# Using the dict() constructor
+animals = dict(cat="meow", dog="bark", bird="tweet")
+
+#updating 
+Spa_Gp[1]= "Fernando Alonso"
+print(Spa_Gp)
+
+#Acessing values --[]. .get()
+WDC ={
+    "Max Verstappen":1,
+    "Fernando Alonso":2,
+    "Sergio Perez":3
+}
+print(WDC["Max Verstappen"])
+print(WDC["Fernando Alonso"])
+print(WDC["Sergio Perez"])
+
+for w in WDC:
+    print(w,WDC[w])
+
+#modyfying dictionaries
+#Adding new value
+WDC["George Russell"] = 4
+WDC
+
+#change value
+WDC["George Russell"] =6
+WDC
+
+print(len(WDC))
+print(WDC.keys())
+print(WDC.values())
+print(WDC.items)
+print(WDC.get("Max Verstappen"))
+
+
+#nested Dictionaries
+person= {
+    "F.name":"Martin",
+    "L.name":"muti",
+    "Address":{
+        "city":"Nairobi",
+        "zipCode":"1002"
+    }
+}
+
+print(person["Address"]["city"])
