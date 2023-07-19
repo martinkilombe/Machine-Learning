@@ -509,3 +509,114 @@ person= {
 }
 
 print(person["Address"]["city"])
+
+
+#SETS -immutable, unindexed, NO Duplication
+
+s = {1,2,3,4,5,6}
+#Add item to set
+s.add(7) #The same for .append() in Lists
+print(s)
+
+#Add more items to set
+t = {8,9,10,11,12,13}
+s.update(t)
+print(s)
+
+#removing
+s.remove(13) #removes 13
+print(s)
+
+#Set operations
+set1 ={1,2,3}
+set2 = {3,4,5}
+
+union_set = set1.union(set2)
+print(union_set)
+intersection_set = set1.intersection_set(set2)
+print(intersection_set)
+
+
+#Frozen sets
+s = {1,2,3,4,5,6,7,8}
+a=frozenset(s)
+print(s) 
+
+
+
+
+
+#string Manipulation
+a = "Python is a programming language"
+#using Arrays
+print(a[::]) #prints everything
+print(a[0])
+print(a[::])
+
+#Using loops
+for i in a:
+    print(i)
+   
+#booleans
+print("is" in a)
+
+#CASE -- .replace()
+print(a.replace("Not", ""))
+print(a)
+ 
+
+#Arrays using numpy
+import numpy as np
+#0 d array
+a = np.array(56)
+print(a)
+print(a.ndim)
+#1D array
+b =np.array([1,2,3,4])
+print(b)
+print(b.ndim)
+
+#3D array
+c = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+print(c)
+print(c.ndim)
+
+#create arrays using ndim()
+
+#referencing arrays
+
+#.copy() and .view() array
+#.copy()
+a =np.array([1,2,4,5])
+x= a.copy()
+a[0] =45
+x[0]=78
+print(a)
+print(x)
+
+#.view()
+a =np.array([1,2,4,5])
+x= a.view()
+a[0] =45
+x[0]=78
+print(a)
+print(x)
+
+#defining and calling functions
+def add():
+    num1 = int(input("Enter first integer: "))
+    num2 = int(input("Enter second integer: "))
+    result = num1 + num2
+    print(f"Addition of {num1} and {num2} is : {result}")
+
+add()
+
+
+#Formula one example
+def points_system():
+    Position = int(input("Finishing points are: "))
+    Fastest_lap = int(input("The fastest lap points are: "))
+    total_points = Position + Fastest_lap
+    print(f"MAx verstpen earned {Position} points and got fastest {Fastest_lap} points a total of {total_points}")
+
+points_system()
