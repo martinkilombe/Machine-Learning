@@ -331,6 +331,9 @@ age = int(input("Enter your age"))
 print(name,age)
 
 
+
+
+
 #Data structures in python -- List, tuple, dictionaries, sets
 #list
 #sorting
@@ -353,3 +356,65 @@ list
 #count
 c =list.count(2) #counts how many times 2 appears
 print(c)
+
+#Acessing elements
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[0]) #first number :10
+print(numbers[2]) #Third number 30
+print(numbers[-1]) #last element 50
+print(numbers[-3])  #Third item from the end
+
+"""Slicing Lists
+You can extract a portion of a list using slicing. The syntax for slicing is list[start:stop:step]. 
+Remember that the stop index is exclusive."""
+numbers = [10, 20, 30, 40, 50, 60, 70, 80]
+print(numbers[1:4])    # Output: [20, 30, 40]
+print(numbers[:3])     # Output: [10, 20, 30] (from start to index 2)
+print(numbers[3:])     # Output: [40, 50, 60, 70, 80] (from index 3 to end)
+print(numbers[::2])    # Output: [10, 30, 50, 70] (every second element)
+print(numbers[::-1])   # Output: [80, 70, 60, 50, 40, 30, 20, 10] (reversed list)
+
+"""Modifying Lists
+Lists are mutable, so you can change their elements, add new elements, or remove existing ones."""
+f1_teams = ["Redbull","Mercedes","Ferrari"]
+print(f1_teams)
+
+#Change elements
+f1_teams[1]= "Williams" #changes Mercedes with Williams
+f1_teams
+
+#Adding elements -- append(), -- extend()
+f1_teams.append("Alpha Romeo")
+f1_teams
+
+#inserting
+f1_teams.insert(2,"Mercedes")
+f1_teams
+
+#removing elements
+f1_teams.remove("Mercedes")
+f1_teams
+
+#2 Tuples -- immutable , indexed, duplication
+# Creating tuples
+empty_tuple = ()
+single_element_tuple = (42,)
+fruits = ("apple", "banana", "orange")
+coordinates = 10, 20  # Parentheses are optional
+
+print(fruits)      # Output: ('apple', 'banana', 'orange')
+print(coordinates) # Output: (10, 20)
+ 
+#Accessing elements
+coordinates = (10, 20, 30)
+print(coordinates[0])   # Output: 10
+print(coordinates[2])   # Output: 30
+print(coordinates[-1])  # Output: 30 (last element)
+print(coordinates[-2])  # Output: 20 (second element from the end)
+
+#Tuple Unpacking ---Tuple unpacking is a convenient feature in Python that allows you to assign the elements of a tuple to individual variables in a single line of code.
+Austria_results = (1,2,3,4,5)
+Max, Charles, Perez, Russell,Hamilton = Austria_results
+
+#Immutability--As mentioned earlier, tuples are immutable. Once created, you cannot modify their elements or their size.
