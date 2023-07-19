@@ -175,6 +175,11 @@ if var ==45:
 else:
     print("Var does not match")
 
+
+if 5 < 10:
+    print("Five is less than 10")
+else:
+    print("Number is not less than 10")
 #multiple conditions
 var = 47
 if var ==45:
@@ -186,11 +191,165 @@ elif var==47:
 else:
     print("no VAR matches")
 
+
+#number2
+x =50
+if x<0:
+    print("X is a negative number")
+elif x<=25:
+    print("X is in the 25th percentile")
+elif x==75:
+    print("X is in the 75th percentile")
+elif x>=90:
+    print("X is in the 90th percentile")
+else:
+    print("match is not found")
 #Loops
-#while condition:
-    #statement
+"""While Loop:
+The while loop repeats a block of code as long as a certain condition is true.
+ Here's the general syntax of a while loop:
+ while condition:
+    # Code to be executed as long as the condition is true
+"""
+i = 1
+while i <=5:
+    print(i)
+    i+=1
+"""Summing Numbers:
+Let's say you want to calculate the sum of numbers from 1 to a given integer n. You can use a while loop to achieve this:"""
+n = 5
+sum = 0
+i =1
 
-#for i in condition:
-    #Statement
+while i<=n:
+    sum+=i
+    i+=1
+print("sum",sum)
 
-#operators
+"""User Input Validation:
+You can use a while loop to repeatedly ask the user for input until a valid input is provided. 
+For instance, let's ask the user to enter a positive integer:"""
+num = -1
+while num <=0:
+    num = int(input("Enter a positive integer: "))
+print("You entered:", num)
+
+"""Password Validation:
+In this example, we'll ask the user to enter a password and continue prompting until the correct password is entered:"""
+password = "secret"
+
+while True:
+    user_password = input("enter password: ")
+
+    if user_password ==password:
+        print("Access granted")
+        break
+    else:
+        print("incorrect password. Try again")
+"""For Loop:
+The for loop is used to iterate over a sequence (such as a list, tuple, string, or range) or any other iterable object. Here's the general syntax of a for loop:
+for variable in iterable:
+    # Code to be executed for each item in the iterable
+"""
+#list
+numbers = [1,2,3,4,5]
+for num in numbers:
+    print(num)
+
+#multiple list
+names = ["Alice","Bob","charlie"]
+ages = [25,42,45]
+
+for name,age in zip(names,ages):
+    print(name,age)
+
+#range
+for r in range(1,6):
+    print(r)
+
+#string
+message = "Hello, world!"
+for m in message:
+    print(m)
+
+#dictionaries
+student_scores = {"Alice": 85, "Bob": 92, "Charlie": 78}
+
+for student in student_scores:
+    print(student, student_scores[student])
+
+#Using Enumerate
+fruits= ["apple","banana","Cherry"]
+
+for index,fruit in enumerate(fruits):
+    print(index,fruit)
+
+#example 2
+formula = ["Redbull","Aston Martin","Ferrari"]
+
+for index, f in enumerate(formula):
+    print(f"Index :{index} Fruit:{f}")
+
+#control flow statements : break , continue , pass
+for r in range(1,6):
+    if r ==3:
+        continue  # Skip the iteration when i is 3
+    if r ==5:
+        break   # Terminate the loop when i is 5
+    print(r)
+else:
+    pass
+
+for r in range(1,6):
+    print(r)
+else:
+    print("loop complete")
+
+#nested loops
+for i in range(1,4):
+    for j in range(1,3):
+        print(f"({i},{j})")
+
+
+
+
+#Input and output operations
+print("Python coding")
+print("python \tcoding")
+
+age = 67
+age2022 = 66
+print("My name is {0}".format(age))
+print(f"My age is {age} and my age in 2022 is {age2022}")
+
+#inputs
+name= int(input("Enter your name"))
+print(name)
+
+name= input("Enter your name")
+age = int(input("Enter your age"))
+print(name,age)
+
+
+#Data structures in python -- List, tuple, dictionaries, sets
+#list
+#sorting
+list = [1,2,4,5,6]
+list.sort(reverse=True) #sorts in reverse
+list
+
+#appending
+list.append(24)
+list
+
+#remove
+list.pop() #removes the last item
+list
+#Extent
+ext = [7,8,9,10,11] 
+list.extend(ext) #extends the list above
+list
+
+#count
+c =list.count(2) #counts how many times 2 appears
+print(c)
