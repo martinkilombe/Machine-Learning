@@ -601,7 +601,7 @@ a[0] =45
 x[0]=78
 print(a)
 print(x)
-
+#functions
 #defining and calling functions
 def add():
     num1 = int(input("Enter first integer: "))
@@ -621,28 +621,97 @@ def points_system():
 
 points_system()
 
-#positional and return values
-#positional arguements
-def person (fname,lname):
-    print("Firstname :",fname )
-    print("Lastname: ",lname)
+#functions GPT
+def greet(name):
+    print(f"Hello, {name}")
+greet("Alice")
 
-person("Martin", "Muti")
-person("MAX", "VERSTAPPEN") #values are interchanged
+#Default parameters
+def greet(name="Anonymous"):
+    print(f"Hello {name}!")
 
-#default arguements
-def addition (num1,num2):
-    result = num1+ num2
-    print(result)
+greet()  #Prints whats inside
+greet("Alice")   #print Alice
 
-addition(5,6)
 
-#keyword arguements
-def person1(fname,lname,age, mobile, country):
-    print("FirstName :", fname)
-    print("LastName :", lname)
-    print("Age :", age)
-    print("Mobile :", mobile)
-    print("country :", country)
+#returning values
+def add(a,b):
+    return a+b
+print(add(4,5))
 
-person1(fname="Martin",lname="Muti",age=25, mobile= 254713342013, country="Kenya")
+#Returning multiple values
+def get_coordinatesd():
+    x =20
+    y =20
+    return x, y
+
+x,y = get_coordinatesd()
+print(x,y)
+
+#Recursion -- factorial example
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n* factorial(n-1)
+
+print(factorial(6))
+
+#lambda --- useful for one liner operations
+add = lambda a,b : a+b
+print(add(7,87))
+
+"""
+Function Arguments
+Python supports different types of function arguments:"""
+
+"""Positional Arguments: These are the most common type of arguments. 
+The order and number of arguments matter when calling the function."""
+def race(GP, country):
+    print(f"This weekends F1 {GP} GP is held in {country}")
+
+race("Spa","Belgium")
+
+"""Keyword Arguments: You can specify the arguments by their parameter names, which allows you to pass arguments in any order."""
+def race1(Driver ,points):
+    print(f"{Driver} won the Spa GP with {points} points")
+race1(Driver="Max Verstappen",points = 25)
+
+"""Default Arguments: We've seen this before, where you can assign default values to function parameters."""
+def race2(Driver = "Max Vertappen", points  = 25):
+    print(f"The winner of the Spa Gp is {Driver} with {points} points")
+race2()
+
+"""Variable Length Arguments:
+ If you are not sure how many arguments will be passed to a function, 
+ you can use 
+ *args (for positional arguments) and 
+ **kwargs (for keyword arguments)."""
+
+def arguements(*args, **kwargs):
+    print("Positional Argument: ", args)
+    print("Keyword Arguemnts: ", kwargs)
+arguements(1,2,3,name = "Alice", age = 30)
+
+#Variable scope
+"""Local Scope
+A variable is said to have a local scope when it is defined inside a function. 
+Local variables are only accessible within the function where they are defined. 
+Once the function finishes its execution, the local variables are destroyed, and their values cannot be accessed from outside the function."""
+def my_func():
+    x =10
+    print(x)
+my_func()
+
+"""Global Scope
+A variable is said to have a global scope when it is defined at the top level of your script, outside of any function. 
+Global variables are accessible from anywhere in your code, including inside functions."""
+x = 10  # x has a global scope
+
+def my_function():
+    print(x)
+
+my_function()  # Output: 10
+
+# You can access the global variable outside the function
+print(x)  # Output: 10
