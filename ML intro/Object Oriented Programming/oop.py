@@ -620,3 +620,29 @@ def points_system():
     print(f"MAx verstpen earned {Position} points and got fastest {Fastest_lap} points a total of {total_points}")
 
 points_system()
+
+#positional and return values
+#positional arguements
+def person (fname,lname):
+    print("Firstname :",fname )
+    print("Lastname: ",lname)
+
+person("Martin", "Muti")
+person("MAX", "VERSTAPPEN") #values are interchanged
+
+#default arguements
+def addition (num1,num2):
+    result = num1+ num2
+    print(result)
+
+addition(5,6)
+
+#keyword arguements
+def person1(fname,lname,age, mobile, country):
+    print("FirstName :", fname)
+    print("LastName :", lname)
+    print("Age :", age)
+    print("Mobile :", mobile)
+    print("country :", country)
+
+person1(fname="Martin",lname="Muti",age=25, mobile= 254713342013, country="Kenya")
