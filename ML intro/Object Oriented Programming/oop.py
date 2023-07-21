@@ -715,3 +715,58 @@ my_function()  # Output: 10
 
 # You can access the global variable outside the function
 print(x)  # Output: 10
+
+#modules and libraries
+import demo
+print(person.demo)
+
+demo.add(4,2)
+
+
+
+"""Classes:
+A class is a user-defined data type that defines a blueprint for creating objects. 
+It serves as a template that defines the structure and behavior of the objects that will be created based on it. 
+In Python, a class is defined using the class keyword followed by the class name, and it contains attributes (also called properties or data members) 
+and methods (also called functions)."""
+class Person:
+    def __init__(self,name, age): #constructor that initializes object attributes
+        self.name= name
+        self.age = age
+
+    def introduce(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+#Creating objects of the Person class
+person1 =Person("Allice", 24)
+person2 = Person("Mamthew", 45)
+
+# Creating objects of the Person class
+print(person1.name)  # Output: "Alice"
+print(person2.age)   # Output: 25
+
+class Circle:
+    # Class variable (shared by all instances of the class)
+    pi = 3.14159
+
+    def __init__(self, radius):
+        # Instance variable (unique to each object)
+        self.radius = radius
+
+    def calculate_area(self):
+        return Circle.pi * self.radius * self.radius
+
+# Creating objects of the Circle class
+circle1 = Circle(5)
+circle2 = Circle(7)
+
+# Accessing class variable using the class name
+print(Circle.pi)        # Output: 3.14159
+
+# Accessing instance variables
+print(circle1.radius)   # Output: 5
+print(circle2.radius)   # Output: 7
+
+# Calling methods to calculate area
+print(circle1.calculate_area())  # Output: 78.53975
+print(circle2.calculate_area())  # Output: 153.93831
