@@ -1,0 +1,28 @@
+1. Feature Engineering (Takes 30% of Project Time)
+   a) EDA
+     i)   Analyze how many numerical features are present using histogram, pdf with seaborn, matplotlib.
+     ii)  Analyze how many categorical features are present. Is multiple categories present for each feature?
+     iii) Missing Values (Visualize all these graphs)
+     iv)  Outliers - Boxplot
+     v)   Cleaning
+     
+   b) Handling the Missing Values
+     i)   Mean/Median/Mode
+     
+   c) Handling Imbalanced dataset 
+   d) Treating the Outliers
+   e) Scaling down the data - Standardization, Normalization
+   f) Converting the categorical features into numerical features
+
+2. Feature Selection
+   a) Correlation
+   b) KNeighbors
+   c) ChiSquare
+   d) Genetic Algorithm
+   e) Feature Importance - Extra Tree Classifiers
+   
+3. Model Creation
+4. Hyperparameter Tuning
+5. Model Deployment
+6. Incremental Learning
+
